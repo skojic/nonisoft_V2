@@ -1,0 +1,71 @@
+{
+  "company": {
+    "name": "NONI-SOFT",
+    "tagline": "We don't just write code; we build the brains of your business.",
+    "mainHeadline": "ENGINEERING INTELLIGENCE.",
+    "email": "hello@noni-soft.com",
+    "phone": "+1 (234) 567-8900"
+  },
+  "colors": {
+    "primaryBlack": "#050505",
+    "deepSpaceBlue": "#0A0B10",
+    "electricCobalt": "#0080FF",
+    "cyberLime": "#CCFF00",
+    "radioactiveOrange": "#FF6B00",
+    "subtleGray": "#1A1B25"
+  },
+  "settings": {
+    "loadingDuration": 3000,
+    "widgetUpdateInterval": 4000,
+    "particleCount": 50,
+    "enableParallax": true,
+    "enableMeshGradient": true,
+    "enableCustomCursor": true
+  },
+  "services": [
+    {
+      "icon": "⚙️",
+      "title": "Custom AI Integration",
+      "description": "Seamlessly integrate intelligent systems into your existing infrastructure with precision engineering."
+    },
+    {
+      "icon": "🧠",
+      "title": "Machine Learning Models",
+      "description": "Deploy advanced ML solutions tailored to your specific business objectives and data landscape."
+    },
+    {
+      "icon": "🔐",
+      "title": "Data Architecture",
+      "description": "Build robust, secure data pipelines that power your intelligent operations at scale."
+    },
+    {
+      "icon": "⚡",
+      "title": "Performance Optimization",
+      "description": "Maximize efficiency and speed through advanced optimization techniques and best practices."
+    },
+    {
+      "icon": "📊",
+      "title": "Analytics & Insights",
+      "description": "Extract actionable intelligence from your data with comprehensive analytical frameworks."
+    },
+    {
+      "icon": "🎯",
+      "title": "Strategic Consulting",
+      "description": "Navigate your digital transformation journey with expert guidance from industry veterans."
+    }
+  ],
+  "stats": [
+    {
+      "number": "500+",
+      "label": "Projects Delivered"
+    },
+    {
+      "number": "98%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "number": "24/7",
+      "label": "Support Available"
+    }
+  ]
+}

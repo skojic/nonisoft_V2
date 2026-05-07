@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NONI-SOFT | Engineering Intelligence</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Monument+Extended:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="terminal-boot">
+            <div class="terminal-line">$ INITIALIZING NONI-SOFT ARCHITECTURE...</div>
+            <div class="terminal-line">$ LOADING INTELLIGENCE CORE...</div>
+            <div class="terminal-line">$ SYNCING AI NETWORKS...</div>
+            <div class="terminal-line">$ ESTABLISHING SECURE CONNECTION...</div>
+            <div class="terminal-line loading-dots">$ READY<span class="dot-animation">.</span><span class="dot-animation">.</span><span class="dot-animation">.</span></div>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+
+    <!-- Live Trends Bar -->
+    <div class="live-trends-bar" id="live-trends-bar">
+        <div class="live-trends-content">
+            <span class="live-indicator">
+                <span class="live-dot"></span>
+                <span class="live-label">LIVE TRENDS</span>
+            </span>
+            <span class="trends-info">
+                <span class="trend-item"><span id="trend-adoption">78%</span> <span class="trend-label-full">AI Adoption</span><span class="trend-label-short">AI</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-automation">64%</span> <span class="trend-label-full">Automation</span><span class="trend-label-short">Auto</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-reduction">32%</span> <span class="trend-label-full">Cost↓</span><span class="trend-label-short">Cost</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-infra">94%</span> <span class="trend-label-full">Infra Health</span><span class="trend-label-short">Infra</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-accuracy">97%</span> <span class="trend-label-full">Model Accuracy</span><span class="trend-label-short">Acc</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-uptime">99.8%</span> <span class="trend-label-full">Uptime</span><span class="trend-label-short">Up</span></span>
+                <span class="trend-separator">•</span>
+                <span class="trend-item"><span id="trend-speed">2.4ms</span> <span class="trend-label-full">Latency</span><span class="trend-label-short">Lat</span></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo_CBV.svg" alt="NONI-SOFT" class="logo-image">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="mesh-gradient" id="mesh-gradient"></div>
+        <canvas id="hero-bg-sphere" class="hero-bg-sphere" aria-hidden="true"></canvas>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">ENGINEERING<br>INTELLIGENCE.</h1>
+                <p class="hero-subtitle">We don't just write code; we build the brains of your business.</p>
+                <button class="cta-button primary-cta">START YOUR PROJECT</button>
+            </div>
+
+            <aside class="hero-side">
+                <div class="savings-calculator" id="savings-calculator">
+                    <div class="calculator-header">
+                        <span class="calculator-title">AI BUSINESS SAVINGS CALCULATOR</span>
+                        <span class="status-indicator"></span>
+                    </div>
+
+                    <div class="calculator-inputs">
+                        <div class="calc-item">
+                            <label class="calc-label" for="calc-industry">Industry</label>
+                            <select id="calc-industry" class="calc-select">
+                                <option value="saas" selected>SaaS / Tech</option>
+                                <option value="ecommerce">E-commerce / Retail</option>
+                                <option value="logistics">Logistics / Supply Chain</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Finance / Insurance</option>
+                                <option value="manufacturing">Manufacturing</option>
+                            </select>
+                            <div class="calc-value" id="calc-industry-hint">Balanced model with strong automation and support efficiency gains.</div>
+                        </div>
+
+                        <div class="calc-item">
+                            <label class="calc-label" for="calc-revenue">Monthly Revenue</label>
+                            <input id="calc-revenue" class="calc-range" type="range" min="10000" max="1000000" step="5000" value="150000">
+                            <div class="calc-value" id="calc-revenue-value">$150,000</div>
+                        </div>
+
+                        <div class="calc-item">
+                            <label class="calc-label" for="calc-hours">Operational Hours / Month</label>
+                            <input id="calc-hours" class="calc-range" type="range" min="120" max="4000" step="20" value="960">
+                            <div class="calc-value" id="calc-hours-value">960 hrs</div>
+                        </div>
+
+                        <div class="calc-item">
+                            <label class="calc-label" for="calc-team">Team Size</label>
+                            <input id="calc-team" class="calc-range" type="range" min="3" max="500" step="1" value="28">
+                            <div class="calc-value" id="calc-team-value">28 people</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-results">
+                        <div class="result-card">
+                            <span class="result-label">Estimated Monthly Savings</span>
+                            <span class="result-value" id="result-savings">$0</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-label">Productivity Uplift</span>
+                            <span class="result-value" id="result-productivity">0%</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-label">ROI Window</span>
+                            <span class="result-value" id="result-roi">0 months</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="hero-note">Now building focused AI systems for product teams and enterprise workflows.</p>
+            </aside>
+        </div>
+
+        <div class="hero-grid-overlay" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="hero-robot" id="hero-robot" aria-live="polite">
+            <div class="robot-speech" id="robot-speech">
+                <div class="speech-bubble">
+                    <div class="speech-client-name" id="speech-client-name">FJELLINJEN</div>
+                    <div class="speech-achievement" id="speech-achievement">Built intelligent chatbot for Norwegian road toll provider. Automated customer support reducing response time by 75%.</div>
+                </div>
+            </div>
+            <div class="robot-body-shell">
+                <div class="robot-head" id="robot-head">
+                    <div class="robot-antenna"></div>
+                    <div class="robot-eyes">
+                        <span class="robot-eye"><span class="robot-pupil" id="robot-pupil-left"></span></span>
+                        <span class="robot-eye"><span class="robot-pupil" id="robot-pupil-right"></span></span>
+                    </div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-arms" aria-hidden="true">
+                    <span class="robot-arm robot-arm-left">
+                        <span class="robot-forearm"></span>
+                        <span class="robot-hand"></span>
+                    </span>
+                    <span class="robot-arm robot-arm-right">
+                        <span class="robot-forearm"></span>
+                        <span class="robot-hand"></span>
+                    </span>
+                </div>
+                <div class="robot-torso">
+                    <div class="robot-core"></div>
+                </div>
+                <div class="robot-legs">
+                    <span class="robot-leg"></span>
+                    <span class="robot-leg robot-leg-tap"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>OUR CAPABILITIES</h2>
+            <p class="section-subtitle">Strategic AI solutions crafted for your business</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>⚙️</span>
+                </div>
+                <h3>Custom AI Integration</h3>
+                <p>Seamlessly integrate intelligent systems into your existing infrastructure with precision engineering.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>🧠</span>
+                </div>
+                <h3>Machine Learning Models</h3>
+                <p>Deploy advanced ML solutions tailored to your specific business objectives and data landscape.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>🔐</span>
+                </div>
+                <h3>Data Architecture</h3>
+                <p>Build robust, secure data pipelines that power your intelligent operations at scale.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>⚡</span>
+                </div>
+                <h3>Performance Optimization</h3>
+                <p>Maximize efficiency and speed through advanced optimization techniques and best practices.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>📊</span>
+                </div>
+                <h3>Analytics & Insights</h3>
+                <p>Extract actionable intelligence from your data with comprehensive analytical frameworks.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">
+                    <span>🎯</span>
+                </div>
+                <h3>Strategic Consulting</h3>
+                <p>Navigate your digital transformation journey with expert guidance from industry veterans.</p>
+                <a href="#" class="card-link">EXPLORE →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>THE ARCHITECT OF INTELLIGENCE</h2>
+                <p>At NONI-SOFT, we don't just write code—we engineer the computational brains of your business. We combine deep technical expertise with strategic vision to deliver AI solutions that transform how you operate.</p>
+                <p>Our approach is rooted in precision, innovation, and an unwavering commitment to excellence. We build systems that don't just work; they think, adapt, and evolve with your business.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>READY TO BUILD THE FUTURE?</h2>
+        <p>Let's engineer intelligence for your business. Get in touch with our team today.</p>
+        <button class="cta-button primary-cta large">INITIATE PROJECT DISCOVERY</button>
+        <div class="contact-links">
+            <a href="mailto:hello@noni-soft.com" class="contact-link">hello@noni-soft.com</a>
+            <span class="divider">•</span>
+            <a href="tel:+1234567890" class="contact-link">+1 (234) 567-8900</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/logo_CBV.svg" alt="NONI-SOFT" class="footer-logo-image">
+            <p class="footer-copy">&copy; 2026 NONI-SOFT. All rights reserved.</p>
+            <p class="footer-tagline">Architecting Intelligence</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/canvas-animation.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/mesh-gradient.js"></script>
+    <script src="js/robot-assistant.js"></script>
+</body>
+</html>

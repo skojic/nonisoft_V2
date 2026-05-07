@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.env
+.env.local
+.cache/
+.parcel-cache/
+.swp
+.swo
+*~
+.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
