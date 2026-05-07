@@ -74,7 +74,7 @@
             if (talkIntervalId) {
                 clearInterval(talkIntervalId);
             }
-            const displayDuration = (clientAchievements[activeLine].company === 'AUTOSYNC' || 
+            const displayDuration = (clientAchievements[activeLine].company === 'AUTOSYNC' ||
                                      clientAchievements[activeLine].company === 'SENOR') ? 5600 : 2800;
             talkIntervalId = setInterval(rotateLine, displayDuration);
         }, 230);

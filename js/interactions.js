@@ -107,9 +107,9 @@ document.querySelectorAll('.primary-cta').forEach(button => {
         ripple.style.transform = 'scale(0)';
         ripple.style.animation = 'ripple 0.6s ease-out';
         ripple.style.pointerEvents = 'none';
-        
+
         button.appendChild(ripple);
-        
+
         setTimeout(() => ripple.remove(), 600);
     });
 });
@@ -141,7 +141,7 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle (if needed)
 function handleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (window.innerWidth <= 768) {
         // Mobile menu handling
         navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';

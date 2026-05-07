@@ -29,7 +29,7 @@ if (canvas) {
     const hexEdges = [];
     const edgeAdjacency = new Map();
     const edgeIndexByKey = new Map();
-    
+
     // AI Orbs and Geometric Objects
     const aiOrbs = [];
     const geometricShapes = [];

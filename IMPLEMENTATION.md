@@ -101,7 +101,7 @@ Your dark futuristic AI website following "The Architect of Intelligence" design
   4. Performance Optimization
   5. Analytics & Insights
   6. Strategic Consulting
-- **Card Effects**: 
+- **Card Effects**:
   - Hover elevation and border color change
   - Gradient overlay on hover
   - Smooth transitions
@@ -118,7 +118,7 @@ Your dark futuristic AI website following "The Architect of Intelligence" design
 
 ### **Contact Section**
 - **CTA**: "INITIATE PROJECT DISCOVERY" button
-- **Contact Info**: 
+- **Contact Info**:
   - Email: hello@noni-soft.com
   - Phone: +1 (234) 567-8900
 - **Message**: "Ready to build the future?"

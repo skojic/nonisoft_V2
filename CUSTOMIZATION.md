@@ -300,7 +300,7 @@ Add to elements in `styles/main.css`:
     .service-card {
         padding: var(--spacing-md); /* Smaller padding */
     }
-    
+
     .hero-title {
         font-size: 2rem; /* Smaller font */
     }

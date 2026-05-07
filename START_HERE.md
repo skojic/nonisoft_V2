@@ -75,7 +75,7 @@ Your dark futuristic AI website is fully implemented and running at:
 
 **Headline**: "ENGINEERING INTELLIGENCE."
 
-**Tagline**: "We don't just write code; we build the brains of your 
+**Tagline**: "We don't just write code; we build the brains of your
             business."
 
 This positions NONI-SOFT as:

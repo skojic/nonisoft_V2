@@ -137,7 +137,7 @@ function createCSSSGradient() {
         }
 
         #mesh-gradient {
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(0, 162, 255, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(204, 255, 0, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(120, 255, 30, 0.2) 0%, transparent 50%),

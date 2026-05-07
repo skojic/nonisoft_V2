@@ -10,7 +10,7 @@
     --glass-white: #FFFFFF;
     --subtle-gray: #1A1B25;
     --accent-purple: #3BC4FF;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -18,7 +18,7 @@
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
     --spacing-2xl: 6rem;
-    
+
     /* Font Weights */
     --fw-light: 300;
     --fw-regular: 400;
