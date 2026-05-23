@@ -99,7 +99,6 @@ document.addEventListener('keydown', (e) => {
 // CTA Button click handler
 document.querySelectorAll('.primary-cta').forEach(button => {
     button.addEventListener('click', () => {
-        // Create ripple effect
         const ripple = document.createElement('span');
         ripple.style.position = 'absolute';
         ripple.style.borderRadius = '50%';
@@ -113,6 +112,153 @@ document.querySelectorAll('.primary-cta').forEach(button => {
         setTimeout(() => ripple.remove(), 600);
     });
 });
+
+// CTA Actions: scroll-contact / open-discovery
+document.querySelectorAll('[data-action="scroll-contact"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const contact = document.getElementById('contact');
+        if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Discovery Modal
+const discoveryModal = document.getElementById('discovery-modal');
+const discoveryForm = document.getElementById('discovery-form');
+
+function openDiscoveryModal() {
+    if (!discoveryModal) return;
+    discoveryModal.classList.add('is-open');
+    discoveryModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    const firstInput = discoveryModal.querySelector('input, select, textarea');
+    if (firstInput) setTimeout(() => firstInput.focus(), 350);
+}
+
+function closeDiscoveryModal() {
+    if (!discoveryModal) return;
+    discoveryModal.classList.remove('is-open');
+    discoveryModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+}
+
+document.querySelectorAll('[data-action="open-discovery"]').forEach(btn => {
+    btn.addEventListener('click', openDiscoveryModal);
+});
+
+if (discoveryModal) {
+    discoveryModal.querySelectorAll('[data-modal-close]').forEach(el => {
+        el.addEventListener('click', closeDiscoveryModal);
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && discoveryModal && discoveryModal.classList.contains('is-open')) {
+        closeDiscoveryModal();
+    }
+});
+
+// Web3Forms access key — generate at https://web3forms.com using office@noni-soft.com
+const WEB3FORMS_ACCESS_KEY = '3a468e49-b74e-42e3-ae5f-ee838fd8bbd1';
+
+if (discoveryForm) {
+    const submitBtn = document.getElementById('form-submit');
+    const statusEl = document.getElementById('form-status');
+    const successEl = document.getElementById('form-success');
+
+    function setStatus(msg) {
+        if (statusEl) statusEl.textContent = msg || '';
+    }
+
+    function setLoading(loading) {
+        if (!submitBtn) return;
+        submitBtn.classList.toggle('is-loading', loading);
+        submitBtn.disabled = loading;
+    }
+
+    function showSuccess() {
+        discoveryForm.hidden = true;
+        if (successEl) successEl.hidden = false;
+    }
+
+    function resetModal() {
+        discoveryForm.hidden = false;
+        if (successEl) successEl.hidden = true;
+        discoveryForm.reset();
+        setStatus('');
+        setLoading(false);
+    }
+
+    // Reset to form view next time the modal opens after a successful submit
+    document.querySelectorAll('[data-action="open-discovery"]').forEach(btn => {
+        btn.addEventListener('click', resetModal);
+    });
+
+    discoveryForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!discoveryForm.checkValidity()) {
+            discoveryForm.reportValidity();
+            return;
+        }
+
+        if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+            setStatus('Form is not configured yet. Please contact office@noni-soft.com directly.');
+            return;
+        }
+
+        const data = new FormData(discoveryForm);
+        const get = (key) => (data.get(key) || '').toString().trim();
+
+        const name = get('name');
+        const email = get('email');
+        const company = get('company') || '—';
+        const type = get('type');
+        const budget = get('budget') || 'Not specified';
+        const timeline = get('timeline') || 'Not specified';
+        const message = get('message');
+
+        const payload = {
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `Project Discovery — ${type} — ${name}${company !== '—' ? ` (${company})` : ''}`,
+            from_name: `${name}${company !== '—' ? ` (${company})` : ''}`,
+            replyto: email,
+            email: email,
+            name: name,
+            company: company,
+            project_type: type,
+            budget: budget,
+            timeline: timeline,
+            message: message,
+            botcheck: get('botcheck'),
+        };
+
+        setStatus('');
+        setLoading(true);
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const result = await res.json().catch(() => ({}));
+
+            if (res.ok && result.success) {
+                showSuccess();
+            } else {
+                setStatus(result.message || 'Something went wrong. Please try again or email office@noni-soft.com.');
+            }
+        } catch (err) {
+            setStatus('Network error. Please try again or email office@noni-soft.com.');
+        } finally {
+            setLoading(false);
+        }
+    });
+}
 
 // Add active state to nav links based on scroll position
 window.addEventListener('scroll', () => {

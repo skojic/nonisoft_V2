@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NONI-SOFT | Engineering Intelligence</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="images/logo_plain.svg">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Monument+Extended:wght@400;700&display=swap" rel="stylesheet">
@@ -56,7 +56,8 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <img src="images/logo_CBV.svg" alt="NONI-SOFT" class="logo-image">
+                <img src="images/logo_full.svg" alt="NONI-SOFT" class="logo-image logo-image-desktop">
+                <img src="images/logo_plain.svg" alt="NONI-SOFT" class="logo-image logo-image-mobile">
             </div>
             <ul class="nav-links">
                 <li><a href="#services" class="nav-link">Services</a></li>
@@ -75,7 +76,7 @@
             <div class="hero-text">
                 <h1 class="hero-title">ENGINEERING<br>INTELLIGENCE.</h1>
                 <p class="hero-subtitle">We don't just write code; we build the brains of your business.</p>
-                <button class="cta-button primary-cta">START YOUR PROJECT</button>
+                <button class="cta-button primary-cta" data-action="scroll-contact">START YOUR PROJECT</button>
             </div>
 
             <aside class="hero-side">
@@ -189,8 +190,19 @@
 
         <div class="services-grid">
             <div class="service-card">
+                <span class="card-index">01</span>
                 <div class="card-icon">
-                    <span>⚙️</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="12" cy="14" r="3" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="52" cy="14" r="3" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="12" cy="50" r="3" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="52" cy="50" r="3" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="58" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M27 28L14 16M37 28L50 16M27 36L14 48M37 36L50 48M32 26V8M32 38V56" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                        <circle cx="32" cy="32" r="1.5" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3>Custom AI Integration</h3>
                 <p>Seamlessly integrate intelligent systems into your existing infrastructure with precision engineering.</p>
@@ -198,8 +210,20 @@
             </div>
 
             <div class="service-card">
+                <span class="card-index">02</span>
                 <div class="card-icon">
-                    <span>🧠</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="10" cy="16" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="10" cy="32" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="10" cy="48" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="12" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="28" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="44" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="56" r="2" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="54" cy="24" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="54" cy="40" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M12.5 16L29.5 12M12.5 16L29.5 28M12.5 32L29.5 12M12.5 32L29.5 28M12.5 32L29.5 44M12.5 48L29.5 28M12.5 48L29.5 44M12.5 48L30.5 55M34.5 12L51.5 24M34.5 28L51.5 24M34.5 28L51.5 40M34.5 44L51.5 24M34.5 44L51.5 40" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+                    </svg>
                 </div>
                 <h3>Machine Learning Models</h3>
                 <p>Deploy advanced ML solutions tailored to your specific business objectives and data landscape.</p>
@@ -207,8 +231,17 @@
             </div>
 
             <div class="service-card">
+                <span class="card-index">03</span>
                 <div class="card-icon">
-                    <span>🔐</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <ellipse cx="32" cy="14" rx="18" ry="5" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 14V26C14 28.7614 22.0589 31 32 31C41.9411 31 50 28.7614 50 26V14" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 26V38C14 40.7614 22.0589 43 32 43C41.9411 43 50 40.7614 50 38V26" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 38V50C14 52.7614 22.0589 55 32 55C41.9411 55 50 52.7614 50 50V38" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="20" cy="20" r="1" fill="currentColor"/>
+                        <circle cx="20" cy="32" r="1" fill="currentColor"/>
+                        <circle cx="20" cy="44" r="1" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3>Data Architecture</h3>
                 <p>Build robust, secure data pipelines that power your intelligent operations at scale.</p>
@@ -216,8 +249,18 @@
             </div>
 
             <div class="service-card">
+                <span class="card-index">04</span>
                 <div class="card-icon">
-                    <span>⚡</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M32 8C18.745 8 8 18.745 8 32" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M56 32C56 18.745 45.255 8 32 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M8 32C8 39.5 11.5 46 17 50" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M56 32C56 39.5 52.5 46 47 50" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M32 32L46 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="32" cy="32" r="3" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 32H18M50 32H46M32 14V18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M22 22L25 25M42 22L39 25" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+                    </svg>
                 </div>
                 <h3>Performance Optimization</h3>
                 <p>Maximize efficiency and speed through advanced optimization techniques and best practices.</p>
@@ -225,8 +268,19 @@
             </div>
 
             <div class="service-card">
+                <span class="card-index">05</span>
                 <div class="card-icon">
-                    <span>📊</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M8 54H56" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M8 54V10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <rect x="14" y="38" width="6" height="14" stroke="currentColor" stroke-width="1.2"/>
+                        <rect x="24" y="28" width="6" height="24" stroke="currentColor" stroke-width="1.2"/>
+                        <rect x="34" y="20" width="6" height="32" stroke="currentColor" stroke-width="1.2"/>
+                        <rect x="44" y="12" width="6" height="40" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 30L24 22L34 14L48 6" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5" stroke-dasharray="2 2"/>
+                        <circle cx="14" cy="30" r="1.5" fill="currentColor"/>
+                        <circle cx="48" cy="6" r="1.5" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3>Analytics & Insights</h3>
                 <p>Extract actionable intelligence from your data with comprehensive analytical frameworks.</p>
@@ -234,8 +288,18 @@
             </div>
 
             <div class="service-card">
+                <span class="card-index">06</span>
                 <div class="card-icon">
-                    <span>🎯</span>
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                        <path d="M32 4V12M32 52V60M4 32H12M52 32H60" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M32 32L42 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M32 32L24 24" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+                        <circle cx="32" cy="32" r="2" fill="currentColor"/>
+                        <circle cx="42" cy="18" r="1.5" fill="currentColor"/>
+                    </svg>
                 </div>
                 <h3>Strategic Consulting</h3>
                 <p>Navigate your digital transformation journey with expert guidance from industry veterans.</p>
@@ -273,22 +337,127 @@
     <section class="contact" id="contact">
         <h2>READY TO BUILD THE FUTURE?</h2>
         <p>Let's engineer intelligence for your business. Get in touch with our team today.</p>
-        <button class="cta-button primary-cta large">INITIATE PROJECT DISCOVERY</button>
+        <button class="cta-button primary-cta large" data-action="open-discovery">INITIATE PROJECT DISCOVERY</button>
         <div class="contact-links">
-            <a href="mailto:hello@noni-soft.com" class="contact-link">hello@noni-soft.com</a>
-            <span class="divider">•</span>
-            <a href="tel:+1234567890" class="contact-link">+1 (234) 567-8900</a>
+            <a href="mailto:office@noni-soft.com" class="contact-link">office@noni-soft.com</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="images/logo_CBV.svg" alt="NONI-SOFT" class="footer-logo-image">
-            <p class="footer-copy">&copy; 2026 NONI-SOFT. All rights reserved.</p>
-            <p class="footer-tagline">Architecting Intelligence</p>
+            <img src="images/logo_plain.svg" alt="NONI-SOFT" class="footer-logo-image">
+            <div class="footer-text">
+                <p class="footer-copy">&copy; 2026 NONI-SOFT. All rights reserved.</p>
+                <p class="footer-tagline">Architecting Intelligence</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Discovery Modal -->
+    <div class="discovery-modal" id="discovery-modal" role="dialog" aria-modal="true" aria-labelledby="discovery-title" aria-hidden="true">
+        <div class="discovery-backdrop" data-modal-close></div>
+        <div class="discovery-panel" role="document">
+            <button class="discovery-close" type="button" aria-label="Close" data-modal-close>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <div class="discovery-header">
+                <span class="discovery-eyebrow">// PROJECT DISCOVERY</span>
+                <h2 id="discovery-title">Let's engineer something <em>intelligent</em>.</h2>
+                <p class="discovery-sub">Share a few details and we'll get back within one business day.</p>
+            </div>
+
+            <form class="discovery-form" id="discovery-form" novalidate>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="df-name">Name</label>
+                        <input id="df-name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-field">
+                        <label for="df-email">Work Email</label>
+                        <input id="df-email" name="email" type="email" required autocomplete="email" placeholder="jane@company.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="df-company">Company</label>
+                        <input id="df-company" name="company" type="text" autocomplete="organization" placeholder="Acme Inc.">
+                    </div>
+                    <div class="form-field">
+                        <label for="df-type">Project Type</label>
+                        <select id="df-type" name="type" required>
+                            <option value="" disabled selected>Select an area</option>
+                            <option>Custom AI Integration</option>
+                            <option>Machine Learning Models</option>
+                            <option>Data Architecture</option>
+                            <option>Performance Optimization</option>
+                            <option>Analytics &amp; Insights</option>
+                            <option>Strategic Consulting</option>
+                            <option>Other / Not sure yet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="df-budget">Budget Range</label>
+                        <select id="df-budget" name="budget">
+                            <option value="" disabled selected>Select range</option>
+                            <option>Under $25K</option>
+                            <option>$25K – $75K</option>
+                            <option>$75K – $200K</option>
+                            <option>$200K+</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="df-timeline">Timeline</label>
+                        <select id="df-timeline" name="timeline">
+                            <option value="" disabled selected>Select timeline</option>
+                            <option>ASAP</option>
+                            <option>1 – 3 months</option>
+                            <option>3 – 6 months</option>
+                            <option>Exploratory</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field full">
+                    <label for="df-message">Project Details</label>
+                    <textarea id="df-message" name="message" rows="4" required placeholder="Briefly describe what you'd like to build, the problem you're solving, and any constraints we should know about."></textarea>
+                </div>
+
+                <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+                <div class="form-footer">
+                    <p class="form-note">We'll reply within one business day.</p>
+                    <button class="cta-button primary-cta" type="submit" id="form-submit">
+                        <span class="btn-label">TRANSMIT INQUIRY →</span>
+                        <span class="btn-spinner" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="form-success" id="form-success" hidden>
+                <div class="success-glyph" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                        <path d="M20 32L29 41L46 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Transmission received.</h3>
+                <p>Thanks for reaching out. We'll be in touch within one business day at the email you provided.</p>
+                <button class="cta-button primary-cta" type="button" data-modal-close>CLOSE</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/cursor.js"></script>
