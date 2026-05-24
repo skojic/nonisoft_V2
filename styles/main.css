@@ -168,6 +168,18 @@ body {
     cursor: none;
 }
 
+@media (hover: none), (pointer: coarse) {
+    .custom-cursor {
+        display: none;
+    }
+    body,
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+        cursor: auto;
+    }
+}
+
 /* ============================================
    NAVIGATION
    ============================================ */
@@ -293,6 +305,10 @@ body {
     gap: 6px;
     color: var(--cyber-lime);
     font-weight: var(--fw-semibold);
+}
+
+.live-label-short {
+    display: none;
 }
 
 .live-dot {
@@ -1706,8 +1722,20 @@ body {
         letter-spacing: 0;
     }
 
-    .live-label {
+    .live-label-full {
         display: none;
+    }
+
+    .live-label-short {
+        display: inline;
+        font-size: 9px;
+        letter-spacing: 0.4px;
+        flex-shrink: 0;
+    }
+
+    .live-indicator {
+        gap: 4px;
+        flex-shrink: 0;
     }
 
     .live-dot {
@@ -1765,6 +1793,16 @@ body {
 
     .logo-image {
         height: 60px;
+        max-width: none;
+    }
+
+    .logo-image-desktop {
+        display: block;
+        height: 50px;
+    }
+
+    .logo-image-mobile {
+        display: none;
     }
 
     .footer-logo-image {
@@ -1828,7 +1866,20 @@ body {
     .primary-cta {
         width: 100%;
         max-width: 280px;
-        margin-top: 0.8rem;
+        margin: 0.8rem auto 0;
+        display: block;
+        border-radius: 999px;
+    }
+
+    .contact .primary-cta {
+        margin: var(--spacing-lg) auto;
+    }
+
+    .primary-cta.large {
+        padding: 0.7rem 1.5rem;
+        font-size: 14px;
+        letter-spacing: 1.2px;
+        max-width: 240px;
     }
 
     .services-grid {
@@ -1842,13 +1893,20 @@ body {
     .nav-links {
         width: auto;
         justify-content: center;
+        align-items: center;
         gap: 12px;
         flex-wrap: nowrap;
         padding: 0;
+        margin: 0;
         border: none;
         background: transparent;
         backdrop-filter: none;
         box-shadow: none;
+    }
+
+    .nav-links li {
+        display: flex;
+        align-items: center;
     }
 
     .nav-link {
